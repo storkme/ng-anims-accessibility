@@ -1,0 +1,22 @@
+<h1>
+  <img
+    src="https://angular.io/assets/images/logos/angular/angular.svg"
+    class="ng-icon"
+  />
+  <a href="https://angular.io/api/animations/trigger">Triggers</a>
+</h1>
+
+<dl>
+  <dt @fadeHeight *ngIf="state >= 1">Triggers have a name</dt>
+  <dd @fadeHeight *ngIf="state >= 2">
+    <pre><code [highlight]="getHtml"></code></pre>
+  </dd>
+  <dt @fadeHeight *ngIf="state >= 3">And a set of states and transitions</dt>
+  <dd @fadeHeight *ngIf="state >= 4">
+    <pre><code [highlight]="getTrigger"></code></pre>
+  </dd>
+  <dt @fadeHeight *ngIf="state >= 5">And can be bound to expressions</dt>
+  <dd @fadeHeight *ngIf="state >= 6">
+    <pre><code [highlight]="getTriggerExpr"></code></pre>
+  </dd>
+</dl>

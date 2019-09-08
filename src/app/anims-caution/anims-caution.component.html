@@ -1,0 +1,22 @@
+<h1>Caveats&hellip;</h1>
+<ul>
+
+  <li @fadeHeight *ngIf="state >= 1">
+    <i class="em-svg em-anchor"></i> Animations should serve a purpose
+  </li>
+
+  <li @fadeHeight *ngIf="state >= 2">
+    <i class="em-svg em-angry"></i> &hellip; and not frustrate users
+  </li>
+  <li @fadeHeight *ngIf="state >= 3">
+    <i class="em-svg em-stopwatch"></i> Optimum duration is between 200ms -
+    500ms
+    <a
+      href="https://valhead.com/2016/05/05/how-fast-should-your-ui-animations-be/"
+      >*</a
+    >
+  </li>
+  <li @obnoxiousSpin *ngIf="state >= 4">
+    <i class="em-svg em-face_with_rolling_eyes"></i> Don't be ridiculous <small>(PowerPoint transitions are so 20 years ago)</small>
+  </li>
+</ul>

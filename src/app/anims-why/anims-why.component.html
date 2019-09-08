@@ -1,0 +1,20 @@
+<h1>Why?</h1>
+
+<div @fadeHeight *ngIf="state >= 1" class="fun">
+  <div class="center">
+    <h2 [class.visible]="state >= 1">
+      Because it's fun <i class="em-svg em-sunglasses"></i>
+    </h2>
+  </div>
+
+  <svg viewBox="0 0 200 200" class="stop-sign" [class.show]="state >= 2">
+    <path
+      class="outer"
+      d="M 100, 100
+    m -75, 0
+    a 75,75 0 1,0 150,0
+    a 75,75 0 1,0 -150,0"
+    />
+    <path class="strike" d="M 150, 50 L 50, 150" />
+  </svg>
+</div>

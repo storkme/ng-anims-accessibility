@@ -1,0 +1,13 @@
+input[type='text'].no-transition {
+  transition: none;
+}
+
+.examples {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  .example {
+    padding: 0.5em;
+    width: 50%;
+  }
+}

@@ -1,0 +1,39 @@
+<h1>
+  <img
+    src="https://angular.io/assets/images/logos/angular/angular.svg"
+    class="ng-icon"
+  />
+  <a href="https://angular.io/guide/animations#animation-state-and-styles"
+    >States</a
+  >
+  &nbsp;&amp;&nbsp;
+  <a href="https://angular.io/guide/transition-and-triggers">transitions</a>
+</h1>
+
+<ul>
+  <li @fadeHeight *ngIf="state >= 1">
+    <i class="em-svg em-robot_face"></i> Angular animations are
+    <em>state machines</em>
+  </li>
+  <li @fadeHeight *ngIf="state >= 2" class="mt">
+    Example <i class="em-svg em-point_down"></i>
+    <button
+      class="mt-semi"
+      [@bigSmall]="buttonState"
+      (click)="buttonState = buttonState === 'big' ? 'small' : 'big'"
+    >
+      Button ({{ buttonState }})
+    </button>
+  </li>
+
+  <li @fadeHeight *ngIf="state >= 3" class="row">
+    <div class="col">
+      <h4>Code</h4>
+      <pre><code [highlight]="getStateExample"></code></pre>
+    </div>
+    <div class="col">
+      <h4>Template</h4>
+      <pre><code [highlight]="getStateTemplate"></code></pre>
+    </div>
+  </li>
+</ul>

@@ -1,0 +1,61 @@
+$stop-sign-anim-duration: .5s;
+
+.fun {
+  width: 60%;
+  position: relative;
+
+  > .center {
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h2 {
+    z-index: -1;
+    transition: opacity 0.1s ease-in;
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+}
+
+.seriously {
+  min-height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg.stop-sign {
+  > path {
+    stroke: #eb2131;
+    fill: none;
+    stroke-width: 22px;
+    transition: stroke-dashoffset $stop-sign-anim-duration ease;
+
+    &.outer {
+      stroke-dasharray: 472;
+      stroke-dashoffset: 472;
+    }
+
+    &.strike {
+      stroke-dasharray: 142;
+      stroke-dashoffset: 142;
+    }
+  }
+
+  &.show > path {
+    stroke-dashoffset: 0;
+
+    &.strike {
+      transition-delay: $stop-sign-anim-duration * 0.75;
+    }
+  }
+}

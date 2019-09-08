@@ -1,0 +1,42 @@
+<h1>CSS transitions</h1>
+<ul>
+  <li *ngIf="state >= 1" @fadeHeight>
+    <i class="em-svg em-ok_hand"></i>
+    Animate changes between CSS properties
+  </li>
+</ul>
+
+<h3 @fadeHeight *ngIf="state >= 2">Example: Input states</h3>
+
+<div @fadeHeight class="examples" *ngIf="state >= 2">
+  <div class="example">
+    <input
+      type="text"
+      placeholder="Input element"
+      [class.error]="inputState === 'error'"
+      [class.focus]="inputState === 'focused'"
+      [disabled]="inputState === 'disabled'"
+    />
+    <pre [@fadeInOut]="inputState">state: {{ inputState }}</pre>
+
+    <pre
+      *ngIf="state >= 3"
+      @fadeHeight
+    ><code [languages]="['scss']" [highlight]="transitionCss"></code></pre>
+  </div>
+  <div class="example">
+    <input
+      type="text"
+      placeholder="Input element"
+      class="no-transition"
+      [class.error]="inputState === 'error'"
+      [class.focus]="inputState === 'focused'"
+      [disabled]="inputState === 'disabled'"
+    />
+    <pre>state: {{ inputState }}</pre>
+
+    <p class="big" *ngIf="state >= 3" @fadeHeight>
+      <i class="em-svg em-crying_cat_face"></i>
+    </p>
+  </div>
+</div>
