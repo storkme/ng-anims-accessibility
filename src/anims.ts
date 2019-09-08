@@ -37,22 +37,11 @@ export const fadeHeight = trigger('fadeHeight', [
   ]),
 ]);
 
-/**
- * Useful for animating elements that're being added/removed, but AREN'T affecting the layout of the page
- */
-export const fade = trigger('fade', [
-  transition(':enter', [
-    style({ opacity: 0 }),
-    animate('.2s ease-in', style({ opacity: 1 })),
-  ]),
-  transition(':leave', [
-    style({ opacity: 1 }),
-    animate('.2s ease-out', style({ opacity: 0 })),
-  ]),
-]);
-
 export const slideInInitial = [
-  style({ position: 'relative' }),
+  style({
+    position: 'relative',
+    'overflow-x': 'hidden',
+  }),
   query(':enter, :leave', [
     style({
       position: 'absolute',
@@ -63,8 +52,6 @@ export const slideInInitial = [
   ]),
 ];
 
-const slideAnimTiming = '.4s';
-
 /**
  * slide in from left - basically stolen from here https://angular.io/guide/route-animations
  */
@@ -74,11 +61,9 @@ export const slideInFromLeft = [
   query(':leave', animateChild()),
   group([
     query(':leave', [
-      animate(`${slideAnimTiming} ease`, style({ left: '100%', opacity: 0 })),
+      animate(`0.4s ease`, style({ left: '100%', opacity: 0 })),
     ]),
-    query(':enter', [
-      animate(`${slideAnimTiming} ease`, style({ left: '0%', opacity: 1 })),
-    ]),
+    query(':enter', [animate(`0.3s ease`, style({ left: '0%', opacity: 1 }))]),
   ]),
   query(':enter', animateChild()),
 ];
@@ -92,11 +77,9 @@ export const slideInFromRight = [
   query(':leave', animateChild()),
   group([
     query(':leave', [
-      animate(`${slideAnimTiming} ease`, style({ left: '-100%', opacity: 0 })),
+      animate(`0.4s ease`, style({ left: '-100%', opacity: 0 })),
     ]),
-    query(':enter', [
-      animate(`${slideAnimTiming} ease`, style({ left: '0%', opacity: 1 })),
-    ]),
+    query(':enter', [animate(`0.3s ease`, style({ left: '0%', opacity: 1 }))]),
   ]),
   query(':enter', animateChild()),
 ];

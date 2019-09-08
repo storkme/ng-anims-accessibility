@@ -9,18 +9,12 @@ import {
 } from '@angular/animations';
 import { RouterOutlet } from '@angular/router';
 
-export function test(from, to) {
-  console.log('transition:', from, to);
-  return false;
-}
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
     trigger('routeAnimations', [
-      transition(test, []),
       transition(':increment', slideInFromRight),
       transition(':decrement', slideInFromLeft),
       transition('* => *', [

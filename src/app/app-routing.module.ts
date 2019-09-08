@@ -10,6 +10,7 @@ import { AnimsNgTriggersComponent } from './anims-ng-triggers/anims-ng-triggers.
 import { AnimsNgStatesComponent } from './anims-ng-states/anims-ng-states.component';
 import { AnimsNgRoutingIntroComponent } from './anims-ng-routing-intro/anims-ng-routing-intro.component';
 import { AnimsNgRoutingComponent } from './anims-ng-routing/anims-ng-routing.component';
+import { AnimsNgRoutingIiComponent } from './anims-ng-routing-ii/anims-ng-routing-ii.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,11 @@ const routes: Routes = [
     path: 'anims/ng-routing',
     component: AnimsNgRoutingComponent,
     data: { page: 9 },
+  },
+  {
+    path: 'anims/ng-routing-ii',
+    component: AnimsNgRoutingIiComponent,
+    data: { page: 10 },
   },
   {
     path: '**',

@@ -1,10 +1,47 @@
 import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { fadeHeight } from '../../anims';
+import {
+  animate,
+  query,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 
 @Component({
   selector: 'app-anims-ng-routing',
   templateUrl: './anims-ng-routing.component.html',
   styleUrls: ['./anims-ng-routing.component.scss'],
+  animations: [
+    trigger('fadeHeight', [
+      state(
+        'void',
+        style({
+          opacity: 0,
+          height: 0,
+          width: 0,
+        }),
+      ),
+      state(
+        '*',
+        style({
+          opacity: 1,
+          height: '*',
+          width: '*',
+        }),
+      ),
+      transition(':enter', [
+        style({ overflow: 'hidden' }),
+        animate('.3s ease-in'),
+      ]),
+      transition(':leave', [
+        style({ overflow: 'hidden' }),
+        animate('.3s ease-out'),
+      ]),
+    ]),
+  ],
 })
 export class AnimsNgRoutingComponent implements OnInit {
   @HostBinding('class.slide') slide = true;
@@ -18,8 +55,8 @@ export class AnimsNgRoutingComponent implements OnInit {
   @HostListener('window:keydown.arrowright')
   @HostListener('window:keydown.space')
   next() {
-    if (this.state === 6) {
-      this.router.navigate(['/anims/ng-states']);
+    if (this.state === 4) {
+      this.router.navigate(['/anims/ng-routing-ii']);
     } else {
       this.state++;
     }
@@ -35,25 +72,50 @@ export class AnimsNgRoutingComponent implements OnInit {
   }
 
   get routes() {
-    return `...,
-{
-  path: 'anims/ng-routing-intro',
-  component: AnimsNgRoutingIntroComponent,
-  data: { page: 8 },
-},
-{
-  path: 'anims/ng-routing',
-  component: AnimsNgRoutingComponent,
-  data: { page: 9 },
-},
-...`;
+    return `[
+  {
+    path: 'anims/ng-routing-intro',
+    component: AnimsNgRoutingIntroComponent,
+    data: { page: 8 },
+  },
+  {
+    path: 'anims/ng-routing',
+    component: AnimsNgRoutingComponent,
+    data: { page: 9 },
+  },
+]`;
   }
 
   get template() {
-    return `<p @fade>Test</p>`;
+    return `<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>`;
+  }
+
+  get prepareRoute() {
+    return `prepareRoute(outlet: RouterOutlet) {
+  return (
+    outlet &&
+    outlet.activatedRouteData &&
+    outlet.activatedRouteData.page
+  );
+}`;
   }
 
   get anim() {
-    return `<p [@fade]="fadeState"></p>`;
+    return `trigger('routeAnimations', [
+  transition(':increment', slideInFromRight),
+  transition(':decrement', slideInFromLeft),
+  transition('* => *', [
+    query(
+      ':enter',
+      [
+        style({ opacity: 0 }),
+        animate('.2s ease-in', style({ opacity: 1 })),
+      ],
+      { optional: true },
+    ),
+  ]),
+]),`;
   }
 }

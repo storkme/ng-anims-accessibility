@@ -141,6 +141,12 @@
               "devServerTarget": "anims-accessibility-showcase:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/ng-anims-accessibility/"
+          }
         }
       }
     }

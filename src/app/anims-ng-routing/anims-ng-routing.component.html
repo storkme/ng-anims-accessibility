@@ -8,10 +8,44 @@
   >
 </h1>
 
-<div class="examples">
-  <div class="routes" *ngIf="state >= 1">
-    <h4>Routes</h4>
+<div class="examples mt">
+  <div @fadeHeight class="routes" *ngIf="state >= 1">
+    <h4>
+      <a
+        href="https://github.com/storkme/ng-anims-accessibility/blob/master/src/app/app-routing.module.ts#L14"
+        >Routes</a
+      >
+    </h4>
+    <pre><code [highlight]="routes"></code></pre>
   </div>
-  <div class="template" *ngIf="state >= 2"></div>
-  <div class="anim" *ngIf="state >= 3"></div>
+  <div @fadeHeight class="template" *ngIf="state >= 2">
+    <h4>
+      <a
+        href="https://github.com/storkme/ng-anims-accessibility/blob/master/src/app/app.component.html"
+      >
+        Template
+      </a>
+    </h4>
+    <pre><code [highlight]="template"></code></pre>
+  </div>
+  <div @fadeHeight class="template" *ngIf="state >= 3">
+    <h4>
+      <a
+        href="https://github.com/storkme/ng-anims-accessibility/blob/master/src/app/app.component.ts"
+      >
+        Router state function
+      </a>
+    </h4>
+    <pre><code [highlight]="prepareRoute"></code></pre>
+  </div>
+  <div @fadeHeight class="anim" *ngIf="state >= 4">
+    <h4>
+      <a
+        href="https://github.com/storkme/ng-anims-accessibility/blob/master/src/anims.ts#L54-L102"
+      >
+        Animations
+      </a>
+    </h4>
+    <pre><code [highlight]="anim"></code></pre>
+  </div>
 </div>

@@ -1,3 +1,8 @@
 .examples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
+  code {
+    overflow: hidden;
+  }
 }
