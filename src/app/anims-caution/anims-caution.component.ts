@@ -2,7 +2,6 @@ import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {
   animate,
-  keyframes,
   style,
   transition,
   trigger,
@@ -26,7 +25,6 @@ import { fadeHeight } from '../../anims';
           '1s linear',
           style({
             transform: 'rotate(0deg) scale(1)',
-            offset: 1,
             opacity: 1,
             height: '*',
           }),

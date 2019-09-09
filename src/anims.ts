@@ -19,7 +19,8 @@ export const fadeHeight = trigger('fadeHeight', [
     style({
       opacity: 0,
       height: 0,
-      margin: 0,
+      'margin-top': 0,
+      'margin-bottom': 0,
     }),
   ),
   state(
@@ -27,7 +28,8 @@ export const fadeHeight = trigger('fadeHeight', [
     style({
       opacity: 1,
       height: '*',
-      margin: '*',
+      'margin-top': '*',
+      'margin-bottom': '*',
     }),
   ),
   transition(':enter', [style({ overflow: 'hidden' }), animate('.2s ease-in')]),
