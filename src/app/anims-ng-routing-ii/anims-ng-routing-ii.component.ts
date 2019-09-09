@@ -21,7 +21,7 @@ export class AnimsNgRoutingIiComponent implements OnInit {
   @HostListener('window:keydown.space')
   next() {
     if (this.state === 1) {
-      // this.router.navigate(['/anims/ng-states']);
+      this.router.navigate(['/a11y']);
     } else {
       this.state++;
     }

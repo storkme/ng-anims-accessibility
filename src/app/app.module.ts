@@ -20,6 +20,8 @@ import { AnimsNgStatesComponent } from './anims-ng-states/anims-ng-states.compon
 import { AnimsNgRoutingIntroComponent } from './anims-ng-routing-intro/anims-ng-routing-intro.component';
 import { AnimsNgRoutingComponent } from './anims-ng-routing/anims-ng-routing.component';
 import { AnimsNgRoutingIiComponent } from './anims-ng-routing-ii/anims-ng-routing-ii.component';
+import { A11yIntroComponent } from './a11y-intro/a11y-intro.component';
+import { A11yWhyComponent } from './a11y-why/a11y-why.component';
 
 export function hljsLanguages() {
   return [
@@ -43,6 +45,8 @@ export function hljsLanguages() {
     AnimsNgRoutingIntroComponent,
     AnimsNgRoutingComponent,
     AnimsNgRoutingIiComponent,
+    A11yIntroComponent,
+    A11yWhyComponent,
   ],
   imports: [
     BrowserModule,

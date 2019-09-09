@@ -39,6 +39,12 @@ h4 {
 
 .muted {
   opacity: 0.9;
+  font-size: 0.9em;
+}
+
+.extra-muted {
+  opacity: 0.75;
+  font-size: 0.75em;
 }
 
 ul {
@@ -123,7 +129,6 @@ button {
   font-size: 1em;
   padding: 0.5em 1em;
   background: #63b5cf;
-  border: 1px solid;
   transition: box-shadow 0.1s ease, background 0.1s ease, border 0.1s ease;
   border-radius: 0.25rem;
   border: 1px solid transparent;
