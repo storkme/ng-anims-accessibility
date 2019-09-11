@@ -30,7 +30,6 @@ import {
         }),
       ),
       transition('* => small', [
-        style({ 'transform-origin': 'center' }),
         animate('.2s ease-out'),
       ]),
       transition('* => big', [animate('1s ease-in')]),
@@ -83,11 +82,10 @@ export class AnimsNgStatesComponent implements OnInit {
     }),
   ),
   transition('* => big', [
-    style({ 'transform-origin': 'center' }),
-    animate('.2s ease-out'),
+    animate('1s ease-out'),
   ]),
   transition('* => small', [
-    animate('1s ease-in'),
+    animate('.2s ease-in'),
   ]),
 ]),`;
   }
