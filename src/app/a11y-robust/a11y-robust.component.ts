@@ -1,10 +1,12 @@
 import { Component, HostBinding, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { fadeHeight } from '../../anims';
 
 @Component({
   selector: 'app-a11y-robust',
   templateUrl: './a11y-robust.component.html',
   styleUrls: ['./a11y-robust.component.scss'],
+  animations: [fadeHeight],
 })
 export class A11yRobustComponent implements OnInit {
   @HostBinding('class.slide') slide = true;
@@ -19,7 +21,7 @@ export class A11yRobustComponent implements OnInit {
   @HostListener('window:keydown.space')
   next() {
     if (this.state === 8) {
-      // this.router.navigate(['/a11y/how']);
+      this.router.navigate(['/fin']);
     } else {
       this.state++;
     }
