@@ -1,0 +1,31 @@
+<h1>
+  <a href="https://www.w3.org/TR/WCAG21/#operable">Operable</a>
+  &nbsp;
+  <i class="em-svg em-wrench"></i>
+</h1>
+
+<ul>
+  <li @fadeHeight *ngIf="state >= 1">
+    <i class="em-svg em-keyboard"></i>
+    Ensure focusable elements have
+    <a href="https://wicg.github.io/focus-visible/demo/"
+      >clear focus indicators</a
+    >
+  </li>
+  <li @fadeHeight *ngIf="state >= 2">
+    <i class="em-svg em-keyboard"></i>
+    Use a suitable DOM sequence to ensure correct support for tabbing
+  </li>
+  <li @fadeHeight *ngIf="state >= 3">
+    <i class="em-svg em-keyboard"></i>
+    Set <code>tabindex="-1"</code> for hidden elements
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex#Tabindex_Accessibility"
+      >which don't require focus</a
+    >
+  </li>
+  <li @fadeHeight *ngIf="state >= 4">
+    <i class="em-svg em-white_check_mark"></i>
+    Use meaningful page heading elements &amp; <code>&lt;title&gt;</code>
+  </li>
+</ul>

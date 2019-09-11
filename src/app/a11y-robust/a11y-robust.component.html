@@ -1,0 +1,61 @@
+<h1>
+  <a href="https://www.w3.org/TR/WCAG21/#robust">Robust</a>&nbsp;
+  <i class="em-svg em-muscle"></i>
+</h1>
+
+<ul>
+  <li @fadeHeight *ngIf="state >= 1">
+    <i class="em-svg em-white_check_mark"></i>
+    Always use valid HTML <i class="em-svg em-eyes"></i>
+  </li>
+  <li @fadeHeight *ngIf="state >= 2">
+    <i class="em-svg em-white_check_mark"></i>
+    Always use appropriate
+    <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attributes
+    and roles<a
+      href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles"
+      >*</a
+    >:
+  </li>
+  <li @fadeHeight *ngIf="state >= 3">
+    <i class="em-svg em-white_check_mark"></i>
+    &nbsp;
+    <code>aria-describedby</code> for form errors or captions
+  </li>
+  <li @fadeHeight *ngIf="state >= 4">
+    <i class="em-svg em-white_check_mark"></i>
+    &nbsp;
+    <code>role="button"</code> for clickable components
+  </li>
+  <li @fadeHeight *ngIf="state >= 5">
+    <i class="em-svg em-white_check_mark"></i>
+    &nbsp;
+    <code>aria-tab</code> &amp; <code>aria-tabpanel</code> for clickable
+    components
+  </li>
+  <li @fadeHeight *ngIf="state >= 6">
+    <i class="em-svg em-white_check_mark"></i>
+    &nbsp;
+    <code>role="alert"</code
+    ><a
+      href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role"
+      >*</a
+    >
+    for alerts
+  </li>
+  <li @fadeHeight *ngIf="state >= 7">
+    <i class="em-svg em-x"></i>
+    Never duplicate element IDs
+  </li>
+</ul>
+
+<div class="examples" @fadeHeight *ngIf="state >= 8">
+  <div>
+    <h4>Code</h4>
+    <pre><code [highlight]="exampleComponentId"></code></pre>
+  </div>
+  <div>
+    <h4>Template</h4>
+    <pre><code [highlight]="exampleComponentIdTmpl"></code></pre>
+  </div>
+</div>

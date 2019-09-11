@@ -13,6 +13,11 @@ import { AnimsNgRoutingComponent } from './anims-ng-routing/anims-ng-routing.com
 import { AnimsNgRoutingIiComponent } from './anims-ng-routing-ii/anims-ng-routing-ii.component';
 import { A11yIntroComponent } from './a11y-intro/a11y-intro.component';
 import { A11yWhyComponent } from './a11y-why/a11y-why.component';
+import { A11yPerceivableComponent } from './a11y-perceivable/a11y-perceivable.component';
+import { A11yOperableComponent } from './a11y-operable/a11y-operable.component';
+import { A11yUnderstandableComponent } from './a11y-understandable/a11y-understandable.component';
+import { A11yRobustComponent } from './a11y-robust/a11y-robust.component';
+import { EndComponent } from './end/end.component';
 
 const routes: Routes = [
   {
@@ -79,6 +84,31 @@ const routes: Routes = [
     path: 'a11y/why',
     component: A11yWhyComponent,
     data: { page: 12 },
+  },
+  {
+    path: 'a11y/perceivable',
+    component: A11yPerceivableComponent,
+    data: { page: 13 },
+  },
+  {
+    path: 'a11y/operable',
+    component: A11yOperableComponent,
+    data: { page: 14 },
+  },
+  {
+    path: 'a11y/understandable',
+    component: A11yUnderstandableComponent,
+    data: { page: 15 },
+  },
+  {
+    path: 'a11y/robust',
+    component: A11yRobustComponent,
+    data: { page: 16 },
+  },
+  {
+    path: 'fin',
+    component: EndComponent,
+    data: { page: 17 },
   },
   {
     path: '**',

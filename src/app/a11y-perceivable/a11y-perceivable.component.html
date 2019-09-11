@@ -1,0 +1,39 @@
+<h1>
+  <a href="https://www.w3.org/TR/WCAG21/#perceivable">Perceivable</a>
+  &nbsp;
+  <i class="em-svg em-ear"></i>
+</h1>
+
+<ul>
+  <li @fadeHeight *ngIf="state >= 1">
+    <i class="em-svg em-white_check_mark"></i>
+    Always use <code>alt</code> tags for
+    <code>&lt;img&gt;</code> elements
+  </li>
+  <li @fadeHeight *ngIf="state >= 2">
+    <i class="em-svg em-white_check_mark"></i>
+    Use semantic elements for markup:
+    <code>&lt;nav&gt;, &lt;main&gt;, &lt;section&gt;</code> etc
+  </li>
+  <li @fadeHeight *ngIf="state >= 3">
+    <i class="em-svg em-white_check_mark"></i>
+    Always give form elements <code>name</code> (and use corresponding
+    <code>for=""</code> properties on <code>&lt;label&gt;</code> elements
+  </li>
+  <li @fadeHeight *ngIf="state >= 4">
+    <i class="em-svg em-x"></i> Don't rely on colours to convey meaning
+  </li>
+</ul>
+
+<div class="examples mt" @fadeHeight *ngIf="state >= 5">
+  <div class="bad">
+    <h4>Bad</h4>
+    <pre><code [highlight]="exampleBad"></code></pre>
+    <p class="big"><i class="em-svg em-crying_cat_face"></i></p>
+  </div>
+  <div class="good">
+    <h4>Good</h4>
+    <pre><code [highlight]="exampleGood"></code></pre>
+    <p class="big"><i class="em-svg em-heart_eyes_cat"></i></p>
+  </div>
+</div>

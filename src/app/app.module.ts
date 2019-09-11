@@ -22,6 +22,11 @@ import { AnimsNgRoutingComponent } from './anims-ng-routing/anims-ng-routing.com
 import { AnimsNgRoutingIiComponent } from './anims-ng-routing-ii/anims-ng-routing-ii.component';
 import { A11yIntroComponent } from './a11y-intro/a11y-intro.component';
 import { A11yWhyComponent } from './a11y-why/a11y-why.component';
+import { A11yPerceivableComponent } from './a11y-perceivable/a11y-perceivable.component';
+import { A11yOperableComponent } from './a11y-operable/a11y-operable.component';
+import { A11yUnderstandableComponent } from './a11y-understandable/a11y-understandable.component';
+import { A11yRobustComponent } from './a11y-robust/a11y-robust.component';
+import { EndComponent } from './end/end.component';
 
 export function hljsLanguages() {
   return [
@@ -47,6 +52,11 @@ export function hljsLanguages() {
     AnimsNgRoutingIiComponent,
     A11yIntroComponent,
     A11yWhyComponent,
+    A11yPerceivableComponent,
+    A11yOperableComponent,
+    A11yUnderstandableComponent,
+    A11yRobustComponent,
+    EndComponent,
   ],
   imports: [
     BrowserModule,

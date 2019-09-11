@@ -1,0 +1,32 @@
+<h1>
+  <a href="https://www.w3.org/TR/WCAG21/#understandable">Understandable</a>
+  &nbsp;
+  <i class="em-svg em-female-teacher"></i>
+</h1>
+
+<ul>
+  <li @fadeHeight *ngIf="state >= 1">
+    <i class="em-svg em-white_check_mark"></i>
+    Use clear, understandable language
+  </li>
+  <li @fadeHeight *ngIf="state >= 2">
+    <i class="em-svg em-white_check_mark"></i>
+    Be consistent in navigation and design
+  </li>
+  <li @fadeHeight *ngIf="state >= 3">
+    <i class="em-svg em-white_check_mark"></i>
+    Use client-side form validation, and provide clear error &amp; helpful messages
+  </li>
+  <li @fadeHeight *ngIf="state >= 4">
+    <i class="em-svg em-white_check_mark"></i>
+    Link errors to forms using the <code>aria-describedby</code> attribute
+  </li>
+</ul>
+
+<div class="example" @fadeHeight *ngIf="state >= 5">
+
+  <h4>Example form errors</h4>
+  <pre><code [highlight]="exampleForm"></code></pre>
+
+  <p class="big"><i class="em-svg em-heart_eyes_cat"></i></p>
+</div>

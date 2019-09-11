@@ -1,0 +1,9 @@
+.examples {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: center;
+  > div {
+    padding: 1em;
+  }
+}

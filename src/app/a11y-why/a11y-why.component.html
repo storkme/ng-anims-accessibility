@@ -1,1 +1,17 @@
-<p>a11y-why works!</p>
+<h1>Why?</h1>
+
+<p *ngIf="state >= 1" @fadeHeight>
+  <em
+    >Accessible design improves overall user experience and satisfaction,
+    especially in a variety of situations, across different devices, and for
+    older users. Accessibility can enhance your brand, drive innovation, and
+    extend your market reach</em
+  >
+</p>
+<p *ngIf="state >= 2" @fadeHeight class="muted">
+  - W3C's Web Accessibility Initiative
+</p>
+<p *ngIf="state >= 3" @fadeHeight>
+  Also, in some cases, it's a legal requirement
+  <i class="em-svg em-female-judge"></i>
+</p>
